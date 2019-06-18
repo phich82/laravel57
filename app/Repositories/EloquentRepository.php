@@ -112,10 +112,10 @@ abstract class EloquentRepository implements RepositoryContract
      *
      * @return string
      */
-     public function getTable()
-     {
-         return $this->model->getTable();
-     }
+    public function getTable()
+    {
+        return $this->model->getTable();
+    }
 
      /**
       * Handle dynamic method calls into the repository.
@@ -125,8 +125,8 @@ abstract class EloquentRepository implements RepositoryContract
       *
       * @return mixed
       */
-     public function __call($method, $params)
-     {
-         return $this->model->newQuery()->$method(...$params);
-     }
+    public function __call($method, $params)
+    {
+        return $this->model->newQuery()->$method(...$params);
+    }
 }
